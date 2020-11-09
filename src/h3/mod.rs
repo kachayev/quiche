@@ -443,14 +443,14 @@ impl Config {
         self.qpack_blocked_streams = Some(v);
     }
 
-    /// Sets the `poll()` repetition threshold for DATAGRAMs.
+    /// Sets the `poll()` repetition threshold for DATAGRAM events.
     ///
     /// The default is no threshold.
     pub fn set_dgram_poll_threshold(&mut self, v: usize) {
         self.dgram_poll_threshold = Some(v);
     }
 
-    /// Sets the `poll()` repetition threshold for streams.
+    /// Sets the `poll()` repetition threshold for stream events.
     ///
     /// The default is no threshold.
     pub fn set_stream_poll_threshold(&mut self, v: usize) {
