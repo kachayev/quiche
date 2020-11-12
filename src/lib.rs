@@ -437,8 +437,8 @@ pub struct Config {
     version: u32,
 
     // BoringSSL's SSL_CTX structure is technically safe to share across threads
-    // but once shared, functions tha modify it can't be used anymore. We can't
-    // encode that in Rust, so just make it Send+Sync with a mutex to fullfill
+    // but once shared, functions that modify it can't be used any more. We can't
+    // encode that in Rust, so just make it Send+Sync with a mutex to fulfill
     // the Sync constraint.
     tls_ctx: Mutex<tls::Context>,
 
